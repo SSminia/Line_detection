@@ -16,7 +16,7 @@ To complete this task, the following steps have been taken in our software.
 
 ![Cannyedge](https://i.imgur.com/Dqwp8NR.png)
 
-3) Third: Afterwards, using the results of the canny edge detection, then a Hough Line Transform function is applied within the limits of the region of interested. Tuning the values such that we reduce the amount of horizontal lines detected. The results are then drawn over the original video. The resulting image is shown while running the program.
+3) Third: Afterwards, using the results of the canny edge detection, then a Hough Line Transform function is applied within the limits of the region of interested. A second component filters lines whose angles are too horizontal. The results are then drawn over the original video. The resulting image is shown while running the program.
 
 ![result](https://i.imgur.com/PVctC1Y.png)
 
