@@ -23,7 +23,7 @@ To complete this task, the following steps have been taken in our software.
 ### Results
 As previously mentioned, the resulting video is outputted into the mp4 file "outpy.mp4", an excert of the video can be seen below. You can check the whole video in the file available in the repository.
 
-![outpygif](result.gif)
+![outpygif](https://puu.sh/G4zFr/838575618a.gif)
 
 
 ### Conclusion
