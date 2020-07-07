@@ -29,20 +29,21 @@ def process(image):
     width = image.shape[1]
     region_of_interest_vertices = [
         (0, height),
-        (width/2, height/2),
+        (width/2, height/1.7),
         (width, height)
     ]
     gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     canny_image = cv2.Canny(gray_image, 100, 120)
+    cv2.imwrite('canny2.png', canny_image)
     cropped_image = region_of_interest(canny_image,
                     np.array([region_of_interest_vertices], np.int32),)
     lines = cv2.HoughLinesP(cropped_image,
                             rho=1,
                             theta=np.pi/180,
-                            threshold=50,
+                            threshold=40,
                             lines=np.array([]),
-                            minLineLength=40,
-                            maxLineGap=50)
+                            minLineLength=1,
+                            maxLineGap=25)
     cor_lines = []
     for x in lines:
         y = x[0]
@@ -61,14 +62,17 @@ def process(image):
     return image_with_lines
 
 cap = cv2.VideoCapture('video.mp4')
+out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 20, (640,360))
 
 while cap.isOpened():
     ret, frame = cap.read()
     frame = process(frame)
+    out.write(frame)
     cv2.imshow('frame', frame)
     #cv2.waitKey(0)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
+out.release()
 cap.release()
 cv2.destroyAllWindows()
