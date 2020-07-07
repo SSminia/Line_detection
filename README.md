@@ -4,13 +4,13 @@
  
  
 ###  Introduction
-The task description, was to, from any given video to detect the lines of the lane a car is driving. . This was done using CV2 and python. 
+The task description, was to, from any given video to detect the lines of the lane in which a car is driving. . This was done using openCV2 and python. 
 
 ### Method
 
 To complete this task, the following steps have been taken in our software. 
 
-1) First: we define a region of interest. This is to reduce the noise in the image and to avoid line dectitions outside the area we are interested in 
+1) First: we define a region of interest and conver the image to grayscale. This is to reduce the noise in the image and to avoid line dectitions outside the area we are interested in. 
 
 2) Second: then apply canny edge detection to reduce the noise within the image, as shown in the following screenshot
 
@@ -26,5 +26,5 @@ As previously mentioned, the resulting video is outputted into the mp4 file "out
 ![result](result.gif)
 
 ### Conclusion
-The task was successfully completed, however, the performance of the program we have deviced can be further improved. It is possible to apply thresholding after the region masking so then the canny edge dectection would give better results. Perhaps it would be possible to further improve the area of interest by fine tuning the polygon shape used to mask what is not needed in the frame of the video.
+The task was successfully completed, however, the performance of the program we have deviced can be further improved. It is possible to apply thresholding after the region masking so then the canny edge dectection would give better results. Perhaps it would be possible to further improve the area of interest by fine tuning the polygon shape used to mask what is not needed in the frame of the video. another option is to fine tune the region in which the angle of a line is considered valid.
  
