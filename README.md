@@ -21,10 +21,7 @@ To complete this task, the following steps have been taken in our software.
 ![result](https://i.imgur.com/PVctC1Y.png)
 
 ### Results
-As previously mentioned, the resulting video is outputted into the mp4 file "outpy.mp4", an excert of the video can be seen below. You can check the whole video in the file available in the repository.
-
-![outpygif](https://imgur.com/Sj49EDo)
-
+As previously mentioned, the resulting video is outputted into the mp4 file "outpy.mp4". You can check the whole video in the file available in the repository.
 
 ### Conclusion
 The task was successfully completed, however, the performance of the program we have deviced can be further improved. It is possible to apply thresholding after the region masking so then the canny edge dectection would give better results. Perhaps it would be possible to further improve the area of interest by fine tuning the polygon shape used to mask what is not needed in the frame of the video.
